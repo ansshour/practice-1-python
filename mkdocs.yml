@@ -1,0 +1,47 @@
+site_name: Публикация результатов исследований
+site_description: Лабораторная работа № 1 — MkDocs, CI/CD и публикация на Helios
+site_url: !ENV [SITE_URL, 'http://127.0.0.1:8000/']
+repo_url: https://github.com/ansshour/practice-1-python
+site_dir: dist
+use_directory_urls: true
+
+nav:
+  - Главная: index.md
+  - Научный контент: example.md
+  - T3 — платформы CI/CD: t3.md
+  - P4 — доставка на Helios: p4.md
+  - Ход работы: progress.md
+  - Лицензии: licenses.md
+
+theme:
+  name: material
+  language: ru
+  font: false
+  palette:
+    primary: deep purple
+    accent: purple
+
+plugins:
+  - search:
+      lang: [ru, en]
+
+markdown_extensions:
+  - tables
+  - fenced_code
+  - attr_list
+  - pymdownx.arithmatex:
+      generic: true
+
+extra_css:
+  - assets/katex/katex.min.css
+
+extra_javascript:
+  - assets/katex/katex.min.js
+  - assets/katex/auto-render.min.js
+  - assets/math.js
+
+validation:
+  links:
+    not_found: warn
+    anchors: warn
+    unrecognized_links: warn
